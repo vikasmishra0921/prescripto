@@ -51,7 +51,7 @@ const Navbar = () => {
   rel="noopener noreferrer"
   className="bg-gray-500 text-white px-2 py-1 rounded-full font-light hidden md:block"
 >
-  Admin / Doctor
+  Adm / Dr 
 </a>
 
         
@@ -146,14 +146,14 @@ const Navbar = () => {
   href="https://prescripto-admindoctor-login.netlify.app/"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-gray-500 text-white px-2 py-1 rounded-full font-light hidden md:block"
+  className="bg-gray-500 text-white px-2 py-1 rounded-full font-light "
 >
   Admin / Doctor
 </a>
 
             <button
             onClick={() => navigate("/login")}
-            className="bg-primary text-white px-8 py-3 rounded-full font-light hidden  md:block"
+            className="bg-primary text-white px-8 py-3 rounded-full font-light  "
           >
             CREATE ACCOUNT
           </button>
