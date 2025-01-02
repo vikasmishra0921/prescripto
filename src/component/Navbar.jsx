@@ -163,7 +163,7 @@ const Navbar = () => {
           >
             CREATE ACCOUNT
           </button>
-            )
+            )}
             
           </ul>
         </div>
