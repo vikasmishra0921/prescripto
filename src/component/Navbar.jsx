@@ -45,17 +45,15 @@ const Navbar = () => {
         </NavLink>
 
 
-<button
-          onClick={() =>
-            window.open(
-              "https://prescripto-admindoctor-login.netlify.app/",
-              "_blank"
-            )
-          }
-          className="bg-gray-500 text-white px-2 py-1 rounded-full font-light hidden md:block"
-        >
-          Admin / Doctor
-        </button>
+<a
+  href="https://prescripto-admindoctor-login.netlify.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gray-500 text-white px-2 py-1 rounded-full font-light hidden md:block"
+>
+  Admin / Doctor
+</a>
+
         
       </ul>
 
@@ -143,6 +141,24 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded  inline-block">CONTACT</p>
             </NavLink>
+
+<a
+  href="https://prescripto-admindoctor-login.netlify.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gray-500 text-white px-2 py-1 rounded-full font-light hidden md:block"
+>
+  Admin / Doctor
+</a>
+
+            <button
+            onClick={() => navigate("/login")}
+            className="bg-primary text-white px-8 py-3 rounded-full font-light hidden  md:block"
+          >
+            CREATE ACCOUNT
+          </button>
+            
+            
           </ul>
         </div>
       </div>
