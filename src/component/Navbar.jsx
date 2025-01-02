@@ -140,7 +140,13 @@ const Navbar = () => {
             </NavLink>
             <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded  inline-block">CONTACT</p>
+
+              
             </NavLink>
+
+
+
+            {token && userData ? ( ""):(
 
 <a
   href="https://prescripto-admindoctor-login.netlify.app/"
@@ -157,7 +163,7 @@ const Navbar = () => {
           >
             CREATE ACCOUNT
           </button>
-            
+            )
             
           </ul>
         </div>
