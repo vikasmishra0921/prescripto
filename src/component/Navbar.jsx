@@ -46,6 +46,20 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-4">
+
+  <button
+          onClick={() =>
+            window.open(
+              "https://prescripto-admindoctor-login.netlify.app/",
+              "_blank"
+            )
+          }
+          className="bg-gray-500 text-white px-2 py-1 rounded-full font-light hidden md:block"
+        >
+          Admin / Doctor
+        </button>
+        
+        
         {token && userData ? (
           <div className="flex items-center gap-4 cursor-pointer group relative">
             <img className="w-8 rounded-full" src={userData.image} />
