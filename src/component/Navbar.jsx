@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { token, setToken, userData } = useContext(AppContext);
   const [showMenu, setShowMenu] = useState(false);
-  const { sToken, seDToken } = useState(DoctorContext);
+  const { sToken, seDToken } = useContext(DoctorContext);
   const logOut = () => {
     setToken(false);
     localStorage.removeItem("token");
@@ -146,8 +146,8 @@ const Navbar = () => {
 
 
 
-            {token && userData ? ( ""):(
-
+            {token && userData ? null : (
+<>
 <a
   href="https://prescripto-admindoctor-login.netlify.app/"
   target="_blank"
@@ -163,6 +163,8 @@ const Navbar = () => {
           >
             CREATE ACCOUNT
           </button>
+
+</>
             )}
             
           </ul>
