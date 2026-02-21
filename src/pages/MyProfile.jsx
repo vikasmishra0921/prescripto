@@ -35,7 +35,7 @@ const MyProfile = () => {
         setImage(false);
       } else {
         console.log(error);
-        toast.error(error.message);
+        toast.error(data.message);
       }
     } catch (error) {
       console.log(error);
