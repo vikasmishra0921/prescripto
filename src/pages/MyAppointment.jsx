@@ -34,7 +34,7 @@ const Myappointmen = () => {
   const getUserAppointments = async () => {
     // console.log("yahi hai", backendUrl);
     try {
-      const { data } = await axios.get(backendUrl + "/api/user/appointments", {
+      const { data } = await axios.get(backendUrl + "api/user/appointments", {
         headers: { token },
       });
 
@@ -51,7 +51,7 @@ const Myappointmen = () => {
   const cancelAppointment = async (appointmentId) => {
     try {
       const { data } = await axios.post(
-        backendUrl + "/api/user/cancel-appointment",
+        backendUrl + "api/user/cancel-appointment",
         { appointmentId },
         { headers: { token } }
       );
@@ -82,7 +82,7 @@ const Myappointmen = () => {
 
         try {
           const { data } = await axios.post(
-            backendUrl + "/api/user/verifyRazorpay",
+            backendUrl + "api/user/verifyRazorpay",
             response,
             { headers: { token } }
           );
@@ -104,7 +104,7 @@ const Myappointmen = () => {
   const appointmentRazorpay = async (appointmentId) => {
     try {
       const { data } = await axios.post(
-        backendUrl + "/api/user/payment-razorpay",
+        backendUrl + "api/user/payment-razorpay",
         { appointmentId },
         { headers: { token } }
       );

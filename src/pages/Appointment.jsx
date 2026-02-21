@@ -116,7 +116,7 @@ const Appointment = () => {
       console.log("Booking slotDate:", slotDate, "slotTime:", slotTime);
 
       const { data } = await axios.post(
-        backendUrl + "/api/user/book-appointment",
+        backendUrl + "api/user/book-appointment",
         { docId, slotDate, slotTime },
         { headers: { token } }
       );
