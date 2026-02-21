@@ -17,19 +17,18 @@ const AppContextProvider = (props) => {
   const [userData, setUserData] = useState(false);
 
   const getDoctorsData = async () => {
-    try {
-      const { data } = await axios.get(backendUrl + "/api/doctor/list");
-
-      if (data.success) {
-        setDoctors(data.doctors);
-      } else {
-        toast.error(error.message);
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error(error.message);
+  try {
+    const { data } = await axios.get(backendUrl + "/api/doctor/list");
+    if (data.success) {
+      setDoctors(data.doctors);
+    } else {
+      toast.error(data.message); // ✅ use data.message
     }
-  };
+  } catch (error) {
+    console.log(error);
+    toast.error(error.message);
+  }
+};
 
   const loadUserProfileData = async (req, res) => {
     try {
